@@ -82,7 +82,7 @@ a{
 header nav{
     
     /* position: fixed; */
-    width: 100%;
+    width: 93%;
     /* background-color: #D2CECD; */
     top: 0;
     align-items: center;
@@ -91,7 +91,7 @@ header nav{
     justify-content: space-between;
 }
 .my-name{
-    width: 45%;
+    width: 60%;
 }
 .links{
     width: 40%;
@@ -142,9 +142,12 @@ background-color: black;
 border-radius:10px;
 }
 .projects {
+    width: 100%;
+    margin-left: 5% ;
     display:flex;
     flex-flow:row wrap;
-    justify-content:space-around;
+    justify-content:space-between;
+    align-items: center;
 }
 
 .project {
@@ -160,7 +163,7 @@ border-radius:10px;
 .project h3{
     display:flex;
     align-items: flex-start;
-    width: 30vh;
+    width: 70%;
 }
 .project h3:hover{
     color: white;
@@ -199,4 +202,44 @@ footer div a:hover{
     color: white;
     background-color: black;
     border-radius:10px;
+}
+
+@media(max-width:800px){
+    /* max width 800px styling  */
+
+    .my-name{
+       
+        padding-left: 0% auto;
+    }
+    .projects{
+        margin: 0 auto;
+    }
+    .project {
+        width: 50%;
+        justify-content: center;
+        text-align:center;
+    }
+    .project h3{
+        width: auto;
+        justify-content: center;
+        align-items: center;  
+    }
+}
+@media(max-width:500px){
+    nav{
+        width: 100%;
+        flex-direction: column;
+    }
+    nav .my-name{
+        width: 100%;
+        margin: 3% 2% ;
+    }
+    nav .links{
+        flex-direction: column;
+    }
+    .project {
+        width: 100%;
+        margin: 0 auto;
+    }
+
 }
